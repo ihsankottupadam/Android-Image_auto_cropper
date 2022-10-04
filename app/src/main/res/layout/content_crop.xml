@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+	android:background="@drawable/bg_j"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	
+	<android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+		android:background="@drawable/progress_head"
+        android:layout_height="?android:attr/actionBarSize">
+		
+	<TextView
+		android:id="@+id/toolbar_title"
+		android:text="Auto crop"
+		android:textStyle="bold"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+		android:transitionName="crop"/>
+	</android.support.v7.widget.Toolbar>
+	<LinearLayout
+		android:padding="10dp"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:transitionName="cropLayout"
+		android:background="@drawable/dg_box_border"
+		android:orientation="vertical">
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingTop="20dp"
+			>
+			<TextView
+				android:id="@+id/textTitle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Folder"
+				android:textSize="15sp"
+				android:layout_marginTop="15dp"/>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@drawable/dgt_edittext"
+				android:padding="0dp"
+				android:layout_below="@+id/textTitle"
+				android:layout_marginRight="8dp"
+				android:layout_toLeftOf="@+id/btnChoose"
+				android:layout_alignParentLeft="true"
+				android:layout_marginLeft="5dp">
+
+				<EditText
+					android:id="@+id/pathEdit"
+					android:layout_width="match_parent"
+					android:layout_height="40dp"
+					android:singleLine="true"
+					android:paddingLeft="8dp"
+					android:editable="false"
+					android:paddingRight="8dp"
+					android:text=""/>
+
+			</LinearLayout>
+
+			<Button
+				android:id="@+id/btnChoose"
+				android:layout_height="40dp"
+				android:layout_width="wrap_content"
+				android:layout_below="@+id/textTitle"
+				android:layout_alignParentRight="true"
+				android:text="CHOOSE"
+				android:paddingLeft="25dp"
+				android:paddingRight="25dp"
+				android:textColor="#5BF8F9"
+				android:background="@drawable/box_selector"
+				android:onClick="choose"/>
+
+		</RelativeLayout>
+		<CheckBox
+			android:id="@+id/delOg"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:checked="false"
+			android:paddingTop="10dp"
+			android:textSize="15sp"
+			android:paddingBottom="10dp"
+			android:text="Delete orginal image"/>
+	
+
+	<Button
+		android:layout_height="50dp"
+		android:layout_width="fill_parent"
+		android:text="START"
+		android:layout_below="@+id/linear_nq"
+		android:background="@drawable/box_selector"
+		android:layout_margin="15dp"
+		android:onClick="start"
+		android:textColor="#5BF8F9"/>
+</LinearLayout>
+</LinearLayout>

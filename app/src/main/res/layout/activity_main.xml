@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+	android:background="@drawable/bg_j">
+	<android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+		android:background="@drawable/progress_head"
+        android:layout_height="?android:attr/actionBarSize"/>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:padding="8dp">
+	<LinearLayout
+		android:id="@+id/layoutCrop"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:gravity="center_vertical"
+		android:onClick="openCrop"
+		android:transitionName="cropLayout"
+		android:layout_marginTop="100dp"
+		android:background="@drawable/dg_box"
+		android:padding="8dp">
+		<ImageView
+			android:id="@+id/imgCrop"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:src="@drawable/ic_crop_80"/>
+		<android.support.v7.widget.AppCompatTextView
+			android:id="@+id/txtCrop"
+			android:text="Auto crop"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textStyle="bold"
+			android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+			android:layout_margin="10dp"
+			android:transitionName="crop"
+			android:textColor="#ffffff"/>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:id="@+id/layoutCompress"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:gravity="center_vertical"
+		android:layout_marginTop="10dp"
+		android:transitionName="compressLayout"
+		android:layout_below="@+id/layoutCrop"
+		android:background="@drawable/dg_box"
+		android:onClick="openCompress"
+		android:padding="8dp">
+
+		<ImageView
+			android:id="@+id/imgCrop"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:src="@drawable/ic_resize"/>
+
+		<android.support.v7.widget.AppCompatTextView
+			android:id="@+id/txtCompress"
+			android:text="Compress"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textStyle="bold"
+			android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+			android:layout_margin="10dp"
+			android:textColor="#ffffff"/>
+
+	</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

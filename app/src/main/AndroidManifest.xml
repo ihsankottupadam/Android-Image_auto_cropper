@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.izn.imageAutoCroper" >
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+		android:resizeableActivity = "true">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" 
+			android:screenOrientation="portrait"
+			android:theme="@style/AppTheme.withAnim"
+			android:windowSoftInputMode="stateHidden"
+		>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		<activity
+            android:name=".ProcessActivity"
+			android:screenOrientation="portrait"
+		/>
+		<activity
+            android:name=".CompressActivity"
+			android:configChanges="keyboardHidden|orientation|screenSize"
+		/>
+			
+		<activity
+            android:name=".InterActivity"
+			android:screenOrientation="portrait"
+		/>
+		
+	<activity
+            android:name=".MultyCropActivity"
+			android:theme="@style/AppTheme.NoActionBar"
+		/>
+		<activity
+            android:name=".AboutActivity"
+            android:label="About"/>
+		<activity
+            android:name=".ActivityCropFrag"
+			android:label="@string/app_name"
+			android:theme="@style/AppTheme.withAnim"/>
+		<activity
+            android:name=".ActivityCompressFrag"
+			android:label="@string/app_name"
+			android:theme="@style/AppTheme.withAnim"/>
+		
+		<activity
+            android:name=".SaveActivity"
+			android:configChanges="keyboardHidden|orientation|screenSize"
+			android:launchMode="singleTop"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true"
+    android:orientation="horizontal">
+	<LinearLayout
+		android:id="@+id/ACTION_CANCEL"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_weight="1"
+		android:gravity="center"
+		android:padding="5dp"
+		android:onClick="onMenuClick"
+		android:background="@drawable/dg_box_selector"
+		android:orientation="vertical">
+
+		<ImageView
+			android:src="@drawable/ic_cancel"
+			android:layout_height="30dp"
+			android:layout_marginTop="10dp"
+			android:scaleType="centerInside"
+			android:layout_width="30dp"/>
+
+		<TextView
+			android:text="CANCEL"
+			android:layout_width="match_parent"
+			android:gravity="center_horizontal"
+			android:textColor="#ffffff"
+			android:textSize="10sp"
+			android:layout_marginTop="8dp"
+			android:layout_height="wrap_content"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/ACTION_CROP_DONE"
+		android:layout_height="match_parent"
+		android:layout_width="wrap_content"
+		android:layout_weight="1"
+		android:gravity="center_horizontal"
+		android:padding="5dp"
+		android:onClick="onMenuClick"
+		android:orientation="vertical"
+		android:background="@drawable/dg_box_selector">
+
+		<ImageView
+			android:src="@drawable/ic_done"
+			android:layout_height="30dp"
+			android:layout_width="30dp"
+			android:layout_marginTop="10dp"
+			android:scaleType="centerInside"/>
+
+		<TextView
+			android:text="CROP"
+			android:layout_width="match_parent"
+			android:gravity="center_horizontal"
+			android:textColor="#ffffff"
+			android:textSize="10sp"
+			android:layout_marginTop="8dp"
+			android:layout_height="wrap_content"/>
+
+	</LinearLayout>
+
+
+</LinearLayout>

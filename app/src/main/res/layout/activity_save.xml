@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:padding="25dp"
+	android:background="@drawable/bg_j"
+	android:orientation="vertical">
+
+	<com.izn.imageautocroper.View.LVNews
+		android:id="@+id/LV"
+		android:layout_marginTop="10dp"
+		android:layout_height="60dp"
+		android:layout_width="60dp"
+		android:layout_centerHorizontal="true"/>
+
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textColor="#ffffff"
+		android:layout_marginTop="35dp"
+		android:textStyle="bold"
+		android:layout_alignParentLeft="true"
+		android:layout_toLeftOf="@+id/txtFileCount"
+		android:layout_below="@+id/LV"
+		android:text="SAVING..."/>
+	<TextView
+		android:id="@+id/txtFileCount"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textStyle="bold"
+		android:textColor="#ffffff"
+		android:layout_marginTop="35dp"
+		android:textSize="12dp"
+		android:lines="1"
+		android:layout_below="@+id/LV"
+		android:layout_alignParentRight="true"/>
+	
+	<ProgressBar
+		android:id="@+id/progress"
+		style="?android:attr/progressBarStyleHorizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:indeterminate="false"
+		android:max="100"
+		android:progress="0"
+		android:layout_below="@+id/title"
+		android:minHeight="20dp"
+		android:maxHeight="20dp"
+		android:layout_marginTop="8dp"
+		android:progressDrawable="@drawable/progress_bg"/>
+
+	<TextView
+		android:id="@+id/txtProgress"
+		android:layout_height="20dp"
+		android:layout_marginTop="8dp"
+		android:gravity="center"
+		android:padding="0dp"
+		android:text="0%"
+		android:visibility="visible"
+		android:layout_below="@+id/title"
+		android:textStyle="bold"
+		android:textSize="12sp"
+		android:layout_width="match_parent"/>
+
+	<RelativeLayout
+		android:id="@+id/liResult"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/progress"
+		android:visibility="gone"
+		android:layout_marginTop="80dp">
+
+		<ImageView
+			android:src="@drawable/dg_res_box"
+			android:layout_height="110dp"
+			android:layout_width="match_parent"
+			android:scaleType="fitXY"/>
+
+		<TableLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:paddingTop="12dp"
+			android:paddingBottom="12dp"
+			android:paddingRight="5dp"
+			android:paddingLeft="5dp">
+
+			<TableRow
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_vertical"
+				android:padding="8dp">
+
+				<TextView
+					android:id="@+id/titleBefore"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Before"
+					android:visibility="invisible"
+					android:textStyle="bold"
+					android:layout_column="2"
+					android:textColor="#ffffff"/>
+
+				<ProgressBar
+					android:id="@+id/progressBefore"
+					android:layout_height="25dp"
+					android:layout_width="match_parent"
+					android:layout_column="2"
+					android:layout_marginRight="5dp"
+					android:layout_marginLeft="20dp"
+					android:layout_weight="1"
+					style="?android:attr/progressBarStyleHorizontal"
+					android:progressDrawable="@drawable/progress_blue"
+					android:indeterminate="false"
+					android:max="100"
+					android:progress="0"
+					/>
+
+				<TextView
+					android:id="@+id/sizeBefore"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:textStyle="bold"
+					android:text=""
+					android:layout_alignParentRight="true"
+					android:layout_column="3"
+					android:textColor="#ffffff"/>
+
+			</TableRow>
+
+			<TableRow
+				
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_vertical"
+				android:padding="8dp">
+
+				<TextView
+					android:id="@+id/titleAfter"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="After"
+					android:visibility="invisible"
+					android:textStyle="bold"
+					android:layout_column="2"
+					android:textColor="#ffffff"/>
+
+				<ProgressBar
+					android:id="@+id/progressAfter"
+					android:layout_height="25dp"
+					android:layout_width="match_parent"
+					android:layout_column="2"
+					android:layout_marginRight="5dp"
+					android:layout_marginLeft="20dp"
+					android:layout_weight="1"
+					style="?android:attr/progressBarStyleHorizontal"
+					android:progressDrawable="@drawable/progress_green"
+					android:indeterminate="false"
+					android:max="100"
+					android:progress="0"
+				/>
+
+				<TextView
+					android:id="@+id/sizeAfter"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:textStyle="bold"
+					android:text=""
+					android:layout_alignParentRight="true"
+					android:layout_column="3"
+					android:textColor="#ffffff"/>
+
+			</TableRow>
+
+		</TableLayout>
+
+	</RelativeLayout>
+
+</RelativeLayout>
+

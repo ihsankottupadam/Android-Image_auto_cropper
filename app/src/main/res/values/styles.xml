@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.AppCompat">
+		<item name="actionBarStyle">@style/myTheme.ActionBar</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:windowContentTransitions">true</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="actionOverflowMenuStyle">@style/AppTheme.OverflowPopupMenu</item>
+		<item name="android:actionBarStyle"  tools:ignore="NewApi">@style/myTheme.ActionBar</item>
+	</style>
+	<style name="AppTheme.withAnim">
+		<item name="windowNoTitle">true</item>
+		<item name="android:windowContentTransitions">true</item>
+	
+	</style>
+	<style name="myTheme.ActionBar" parent="Widget.AppCompat.ActionBar">
+		<item name="background">@drawable/progress_head</item>
+		<item name="displayOptions">showTitle</item>
+		<item name="actionMenuTextColor">#5BF8F9</item>
+		<item name="android:itemTextAppearance">@style/myTheme.Spinner.Text</item>
+		<item name="popupMenuStyle">@style/MyApp.PopupMenu</item>
+	</style>
+	<style name="AppTheme.NoActionBar">
+		<item name="windowNoTitle">true</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:windowFullscreen">true</item>
+	</style>
+	<style name ="MyApp.PopupMenu" parent ="Widget.AppCompat.ListPopupWindow" >
+        <item name= "android:popupBackground" >@drawable/dgt_menuitem</item>
+		<item name= "android:divider">#00000000</item>
+        <item name= "android:dividerHeight" > 0dp </item>
+		<item name="android:itemTextAppearance">@style/myTheme.Spinner.Text</item>
+	</style>
+	
+	<style name="myTheme.Spinner.Text" parent="@android:style/TextAppearance">
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="AppTheme.OverflowPopupMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+		<item name="android:windowDisablePreview">true</item>
+		<item name="overlapAnchor">false</item>
+		<item name="android:dropDownVerticalOffset">1dp</item>
+		<item name="android:popupElevation">7dp</item>
+		<item name="android:popupBackground">@drawable/dgt_menuitem</item>
+	</style>
+
+	
+	<!-- PopDownMenu -->
+	<style name="Animations" />
+		
+	<style name="Animations.PopDownMenu" />
+		
+	<style name="Animations.PopDownMenu.Center">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+	</style>
+
+	<style name="Animations.PopDownMenu.Left">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+	</style>
+
+	<style name="Animations.PopDownMenu.Right">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_topright_to_bottomleft</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottomleft_to_topright</item>
+	</style>
+
+	<style name="Animations.PopDownMenu.Reflect">
+		<item name="@android:windowEnterAnimation">@anim/pump_top</item>
+		<item name="@android:windowExitAnimation">@anim/disappear</item>
+	</style>
+
+	<!-- PopUpMenu -->
+	<style name="Animations.PopUpMenu" />
+
+	<style name="Animations.PopUpMenu.Center">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+	</style>
+
+	<style name="Animations.PopUpMenu.Left">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottomleft_to_topright</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_topright_to_bottomleft</item>
+	</style>
+
+	<style name="Animations.PopUpMenu.Right">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottomright_to_topleft</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_topleft_to_bottomright</item>
+	</style>
+
+	<style name="Animations.PopUpMenu.Reflect">
+		<item name="@android:windowEnterAnimation">@anim/pump_bottom</item>
+		<item name="@android:windowExitAnimation">@anim/disappear</item>
+	</style>
+	
+	
+</resources>
